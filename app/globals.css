@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color system — "Ink & Signal" */
+  --color-ink: #0b0f19;
+  --color-ink-2: #0e1421;
+  --color-surface: #121826;
+  --color-surface-2: #171f30;
+  --color-ink-fg: #edeff4;
+  --color-ink-muted: #8b93a7;
+  --color-ink-faint: #565f74;
+  --color-line: rgba(237, 239, 244, 0.09);
+  --color-line-strong: rgba(237, 239, 244, 0.16);
+
+  --color-signal-amber: #ffb454;
+  --color-signal-amber-dim: #b87d34;
+  --color-wire-cyan: #4ce0c3;
+  --color-wire-cyan-dim: #2f8f7c;
+
+  --font-display: var(--font-display), "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-body), "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), "JetBrains Mono", ui-monospace, monospace;
+
+  --animate-pulse-slow: pulse-slow 3s ease-in-out infinite;
+  --animate-drift: drift 18s ease-in-out infinite;
+  --animate-marquee: marquee 28s linear infinite;
+
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 0.55; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.15); }
+  }
+  @keyframes drift {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(0, -18px, 0); }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
+
+html {
+  background: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-ink);
+  color: var(--color-ink-fg);
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.font-mono-label {
+  font-family: var(--font-mono);
+  letter-spacing: 0.12em;
+}
+
+::selection {
+  background: rgba(255, 180, 84, 0.25);
+}
+
+/* Subtle scrollbar to match the dark surface */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ink);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-2);
+  border-radius: 999px;
+  border: 2px solid var(--color-ink);
+}
+
+/* Respect reduced motion preference globally */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Visible keyboard focus ring, on brand */
+:focus-visible {
+  outline: 2px solid var(--color-wire-cyan);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
