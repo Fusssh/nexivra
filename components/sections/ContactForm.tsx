@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle2, Mail, MapPin, Clock } from "lucide-react";
 import Section from "@/components/Section";
 
-const BUDGETS = ["Under ₹7k", "₹10k – ₹30k", "₹50k – ₹2L", "₹2L – ₹10L", "₹10L – ₹25L", "₹25L+"];
+const BUDGETS = ["Under ₹7k", "₹10k – ₹30k", "₹50k – ₹2L", "₹2L – ₹10L"];
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
