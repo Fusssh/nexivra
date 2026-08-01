@@ -34,9 +34,38 @@ export const metadata: Metadata = {
     "software development company",
     "digital transformation",
     "product engineering",
+    "web development",
+    "app development"
   ],
+  authors: [{ name: "Nexivra Technologies" }],
+  creator: "Nexivra Technologies",
+  publisher: "Nexivra Technologies",
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://nexivratech.netlify.app/",
+    siteName: "Nexivra Technologies",
+    title: "Nexivra Technologies — Building the Next Digital Future",
+    description: "Nexivra Technologies designs and engineers software products, platforms, and digital infrastructure for companies building what's next.",
+    images: [
+      {
+        url: "/nexivra_logo_dark.png",
+        width: 800,
+        height: 600,
+        alt: "Nexivra Technologies Logo",
+      }
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nexivra Technologies — Building the Next Digital Future",
+    description: "Nexivra Technologies designs and engineers software products, platforms, and digital infrastructure for companies building what's next.",
+    images: ["/nexivra_logo_dark.png"],
+  },
   icons: {
-    icon: "/nexivra_logo_dark.png",
+    icon: "/icon.png",
+    apple: "/nexivra_logo_dark.png",
   },
 };
 
