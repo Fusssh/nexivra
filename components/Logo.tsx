@@ -9,7 +9,7 @@ export default function Logo({ className = "" }: { className?: string }) {
       aria-label="Nexivra Technologies — home"
     >
       <Image
-        src="/nexivra_technologies_horizontal_dark.png"
+        src="/logo.png"
         alt="Nexivra Technologies Logo"
         width={240}
         height={60}
