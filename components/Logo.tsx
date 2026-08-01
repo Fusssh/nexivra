@@ -11,9 +11,9 @@ export default function Logo({ className = "" }: { className?: string }) {
       <Image
         src="/nexivra_technologies_horizontal_dark.png"
         alt="Nexivra Technologies Logo"
-        width={180}
-        height={40}
-        className="object-contain h-8 w-auto"
+        width={240}
+        height={60}
+        className="object-contain h-14 md:h-16 w-auto"
         priority
       />
     </Link>
